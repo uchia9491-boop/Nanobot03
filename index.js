@@ -23,7 +23,7 @@ async function iniciarBot() {
   bot.ev.on('connection.update', saveCreds)
 
   bot.ev.on('connection.update', (update) => {
-  const { connection, qr, pairingCode } = update
+  const { connection,pairingCode } = update
   
   if (pairingCode) {
     console.log('\n' + '═'.repeat(50))
