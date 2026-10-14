@@ -20,13 +20,13 @@ async function iniciarBot() {
     browser: ['Bot WhatsApp', 'Chrome', '10.0']
   })
 
-  bot.ev.on('creds.update', saveCreds)
+  bot.ev.on('connection.update', saveCreds)
 
   bot.ev.on('connection.update', (atualizacao) => {
     const { connection, qr } = atualizacao
     if (qr) {
       console.log('📱 Escaneia este código QR com o WhatsApp:')
-      qrcode.generate(qr, { small: true })
+      qrcode.generate(qr, { small: false })
     }
     if (connection === 'open') console.log('✅ BOT ONLINE!')
     if (connection === 'close') iniciarBot()
