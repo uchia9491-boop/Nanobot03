@@ -22,13 +22,22 @@ async function iniciarBot() {
 
   bot.ev.on('connection.update', saveCreds)
 
-  bot.ev.on('connection.update', (atualizacao) => {
-    const { connection, qr } = atualizacao
-    if (qr) {
-      console.log('📱 Escaneia este código QR com o WhatsApp:')
-      qrcode.generate(qr, { small: false })
-    }
-    if (connection === 'open') console.log('✅ BOT ONLINE!')
+  bot.ev.on('connection.update', (update) => {
+  const { connection, qr, pairingCode } = update
+  
+  if (pairingCode) {
+    console.log('\n' + '═'.repeat(50))
+    console.log('📲 CÓDIGO DE PAREAMENTO:  ' + pairingCode)
+    console.log('👉 Abre o WhatsApp > Definições > Dispositivos ligados > Ligar um dispositivo')
+    console.log('👉 Depois clica em "Usar código de pareamento" e digita o código acima')
+    console.log('═'.repeat(50) + '\n')
+  }
+  
+  if (connection === 'open') {
+    console.log('✅ BOT ONLINE!')
+  }
+})
+  
     if (connection === 'close') iniciarBot()
   })
 
