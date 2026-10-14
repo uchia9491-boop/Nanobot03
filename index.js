@@ -15,7 +15,7 @@ async function iniciarBot() {
   const bot = makeWASocket({
     version,
     auth: state,
-    printQRInTerminal: true,
+    printQRInTerminal: false,
     logger: pino({ level: 'silent' }),
     browser: ['Bot WhatsApp', 'Chrome', '10.0']
   })
