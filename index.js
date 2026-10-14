@@ -27,9 +27,9 @@ async function iniciarBot() {
    
    if (pairingCode) {
      console.log('\n' + '='.repeat(50))
-     console.log('📲 CÓDIGO DE PAREAMENTO: ' + pairingCode)
-     console.log('👉 Abre o WhatsApp > Definições > Dispositivos ligados > Ligar um dispositivo')
-     console.log('👉 Clica em "Usar código de pareamento" e digita o código acima')
+     console.log('CÓDIGO DE PAREAMENTO: ' + pairingCode)
+     console.log('Abre o WhatsApp > Definições > Dispositivos ligados > Ligar um dispositivo')
+     console.log(' Clica em "Usar código de pareamento" e digita o código acima')
      console.log('='.repeat(50) + '\n')
    }
    
