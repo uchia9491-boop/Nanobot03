@@ -34,10 +34,10 @@ function iniciarBot() {
         console.log('\n' + '═'.repeat(55))
         console.log('  CÓDIGO DE PAREAMENTO:  ' + pairingCode)
         console.log('═'.repeat(55))
-        console.log('  ABRE O WHATSAPP:')
-        console.log('   Definições → Dispositivos ligados → Ligar um dispositivo')
-        console.log('   → Clica em "Usar código de pareamento"')
-        console.log('   → Digita o código acima\n')
+        console.log(' ABRE O WHATSAPP:')
+        console.log(' Definições → Dispositivos ligados → Ligar um dispositivo')
+        console.log('  → Clica em "Usar código de pareamento"')
+        console.log('  → Digita o código acima\n')
       }
       
       if (connection === 'open') {
